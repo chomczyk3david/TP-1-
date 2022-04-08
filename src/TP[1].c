@@ -12,6 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!");
+	printf("!!!Hello World!!!");
+
 	return EXIT_SUCCESS;
 }
