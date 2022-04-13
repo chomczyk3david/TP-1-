@@ -18,7 +18,7 @@ int main(void){
 	int km;
 	int PrecioVueloA;
 	int PrecioVueloL;
-
+	int Precio;
 	setbuf(stdout,NULL);
 
 
