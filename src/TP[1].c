@@ -19,10 +19,10 @@ int main(void){
     float km=0;
 
     float precioAero=0;
-    float preConTarAer;
     float precioDebiAer;
     float precioCredAer;
     float precioBitAer;
+    float aero;
 
     float precioLan=0;
     float preConTarLan;
@@ -99,7 +99,7 @@ int main(void){
                         if(flagCalculos ==1)
                         {
                            MostrarResultados(&lan,&precioCred,&precioBit);
-
+                           MostrarResultadosAereo(&aero,&precioBitAer,&precioCredAer)
                         }
                         else
                         {

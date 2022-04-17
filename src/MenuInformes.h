@@ -17,5 +17,6 @@ float utn_getNumeroFloat(float* pResultado, char* mensaje,char* mensajeError,int
 void precioPagConBitAer(float precioAero, float *pResulAero3);
 void precioConTarCreAer(float precioAero,float *pResulAero2);
 void precioConTarDebAer(float precioAero,float *pResulAero1);
+void MostrarResultadosAereo(float *precioAero, float *precioCredAer, float *precioBTCaEREO);
 #endif /* MENUINFORMES_H_ */
 int PedirNumeroEntero(char mensaje[]);

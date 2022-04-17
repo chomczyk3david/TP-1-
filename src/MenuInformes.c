@@ -50,11 +50,16 @@ int PedirNumeroEntero(char mensaje[]){
     return numero;
 }
 
-
+void MostrarResultadosAereo(float *precioAero, float *precioCredAer, float *precioBTCaEREO)
+{
+	  printf("el precio con tarjeta debito Aereo: %.2f\n", *precioAero);
+	  printf("el precio con c redito Aereo es : %.2f\n", *precioCredAer);
+	  printf("el precio pagado con BTC es:%.8f\n",*precioBTCaEREO);
+}
 void MostrarResultados(float *precioLan, float *precioCred, float *precioBit)
 {
 
-   printf("el precio con tarjeta debiro lan: %.2f\n", *precioLan);
+   printf("el precio con tarjeta debito lan: %.2f\n", *precioLan);
    printf("el precio con c redito lan es : %.2f\n", *precioCred);
    printf("el precio pagado con BTC es:%.8f\n",*precioBit);
   // printf("el precio unitario es %.2f",precio);
