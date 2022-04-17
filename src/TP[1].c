@@ -25,7 +25,6 @@ int main(void){
     float aero;
 
     float precioLan=0;
-    float preConTarLan;
     float precioDebi;
     float precioCred;
     float precioBit;
@@ -83,9 +82,13 @@ int main(void){
 
                     if(flagIngresoVuelos == 1)
                     {
-                         precioConTarDebLatan(precioLan, &lan);
+                         precioConTarDebLatan(precioLan,&precioDebi);
                          precioConTarCreLan(precioLan,&precioCred);
                          precioPagConBitLan(precioLan,&precioBit);
+
+                         precioPagConBitAe(precioAero,&precioBitAer);
+                         precioConTarCreAe(precioAero,&precioCredAer);
+                         precioConTarDebAer(precioCredAer,&precioDebiAer);
 
                          flagCalculos= 1;
                     }
@@ -99,7 +102,7 @@ int main(void){
                         if(flagCalculos ==1)
                         {
                            MostrarResultados(&lan,&precioCred,&precioBit);
-                           MostrarResultadosAereo(&aero,&precioBitAer,&precioCredAer)
+                           MostrarResultadosAereo(&aero,&precioBitAer,&precioCredAer);
                         }
                         else
                         {
@@ -110,7 +113,7 @@ int main(void){
 
                 break;
                 case 6:
-                    printf("SALIR\n");
+                    printf("GRACIAS POR VIAJAR EN AEROLINEAS DAVID CHOMCZYK:\n");
                 break;
             }
         }
