@@ -14,7 +14,7 @@
 #define BTC 4606954.55
 
 int main(void){
-
+	setbuf(stdout,NULL);
     int opcion;
     float km=0;
 
@@ -121,4 +121,4 @@ int main(void){
 }
 
 
-}
+

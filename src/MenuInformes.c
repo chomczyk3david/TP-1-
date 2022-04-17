@@ -61,9 +61,12 @@ void MostrarResultados(float *precioLan, float *precioCred, float *precioBit)
 
 }
 
-void precioPagConBitAer(float precioAero,float precioBitAer, float *pResulAero3)
+void precioPagConBitAer(float precioAero,float *pResulAero3)
 {
-    *pResulAero3/BTC;
+
+    float resul3;
+    resul3 = precioAero/BTC;
+    *pResulAero3=resul3;
 }
 
 void precioConTarCreAer(float precioAero,float *pResulAero2)
@@ -84,10 +87,13 @@ void precioConTarDebAer(float precioAero,float *pResulAero1)
 }
 
 
-void precioPagConBitLan(float precioLan,float precioBitLan, float *pResultado3)
+void precioPagConBitLan(float precioLan ,float *pResultado3)
 {
 
-*pResultado3/BTC;
+	   float resul3;
+	   resul3 = precioLan/BTC;
+	   *pResultado3=resul3;
+
 }
 
 void precioConTarCreLan(float precioLan,float *pResultado2)
