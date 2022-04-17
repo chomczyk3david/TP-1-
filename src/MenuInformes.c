@@ -6,7 +6,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "MenuInformes.h"
+#define BTC 4606954.55
 
 int MenuInformes()
 {
@@ -47,4 +48,111 @@ int PedirNumeroEntero(char mensaje[]){
     printf("%s\n",mensaje);
     scanf("%d",&numero);
     return numero;
+}
+
+
+void MostrarResultados(float *precioLan, float *precioCred, float *precioBit)
+{
+
+   printf("el precio con tarjeta debiro lan: %.2f\n", *precioLan);
+   printf("el precio con c redito lan es : %.2f\n", *precioCred);
+   printf("el precio pagado con BTC es:%.8f\n",*precioBit);
+  // printf("el precio unitario es %.2f",precio);
+
+}
+
+void precioPagConBitAer(float precioAero,float precioBitAer, float *pResulAero3)
+{
+    *pResulAero3/BTC;
+}
+
+void precioConTarCreAer(float precioAero,float *pResulAero2)
+{
+    float resul2;
+    resul2=precioAero*0.25;
+    *pResulAero2 = precioAero + resul2;
+}
+
+void precioConTarDebAer(float precioAero,float *pResulAero1)
+{
+
+    float resul;
+
+     resul= precioAero *0.10;
+    *pResulAero1 = precioAero - resul;
+
+}
+
+
+void precioPagConBitLan(float precioLan,float precioBitLan, float *pResultado3)
+{
+
+*pResultado3/BTC;
+}
+
+void precioConTarCreLan(float precioLan,float *pResultado2)
+{
+    float resul2;
+    resul2=precioLan*0.25;
+    *pResultado2 = precioLan + resul2;
+}
+void precioConTarDebLatan(float precioLan,float *pResultado)
+{
+
+    float resul;
+
+        resul= precioLan *0.10;
+        *pResultado = precioLan - resul;
+
+}
+
+int utn_getNumero(int* pResultado, char* mensaje,char* mensajeError,int minimo,int maximo,int reintentos)
+{
+    int retorno = -1;
+    int bufferInt;
+        if(pResultado!=NULL && mensaje!= NULL && mensajeError!= NULL && minimo <= maximo && reintentos >=0)
+        {
+            do
+            {
+                printf("%s",mensaje);
+                scanf("%d",&bufferInt);
+                if(bufferInt >= minimo && bufferInt <= maximo)
+                {
+                    *pResultado = bufferInt;
+                    retorno = 0;
+                    break;
+                }
+                else
+                {
+                    printf("%s",mensajeError);
+                    reintentos--;
+                }
+            }while(reintentos >=0);
+        }
+    return retorno;
+}
+float utn_getNumeroFloat(float* pResultado, char* mensaje,char* mensajeError,int minimo,int maximo,int reintentos)
+{
+    int retorno = -1;
+    float bufferfloat;
+        if(pResultado!=NULL && mensaje!= NULL && mensajeError!= NULL && minimo <= maximo && reintentos >=0)
+        {
+            do
+            {
+                printf("%s",mensaje);
+                scanf("%f",&bufferfloat);
+                if(bufferfloat >= minimo && bufferfloat <= maximo)
+                {
+                    *pResultado = bufferfloat;
+                    retorno = 0;
+                    break;
+                }
+                else
+                {
+                    printf("%s",mensajeError);
+                    reintentos--;
+                }
+            }while(reintentos >=0);
+        }
+    return retorno;
 }

@@ -7,8 +7,15 @@
 
 #ifndef MENUINFORMES_H_
 #define MENUINFORMES_H_
-int MenuInformes();
 
-
+void MostrarResultados(float *precioLan, float *precioCred, float *precioBit);
+void precioPagConBitLan(float precioLan,float precioBitLan, float *pResultado3);
+void precioConTarCreLan(float precioLan,float *pResultado2);
+void precioConTarDebLatan(float precioLan,float *pResultado);
+int utn_getNumero(int* pResultado, char* mensaje,char* mensajeError,int minimo,int maximo,int reintentos);
+float utn_getNumeroFloat(float* pResultado, char* mensaje,char* mensajeError,int minimo,int maximo,int reintentos);
+void precioPagConBitAer(float precioAero,float precioBitAer, float *pResulAero3);
+void precioConTarCreAer(float precioAero,float *pResulAero2);
+void precioConTarDebAer(float precioAero,float *pResulAero1);
 #endif /* MENUINFORMES_H_ */
 int PedirNumeroEntero(char mensaje[]);
